@@ -1,0 +1,10 @@
+body{
+    background-image: url(../images/THE\ story.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.button{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

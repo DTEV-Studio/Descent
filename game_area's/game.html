@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" style="cursor: url(../images/cursor.png), auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Almighty Story</title>
+    <link rel="stylesheet" href="../css/game.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="game_body" class="game_body">
+    <div class="display">
+    <div class="side_display">
+    <div class="stats">
+        <ul class="stats_ul">
+            <li class="stats_li" id="stat_level">THOU are level: 1</li>
+            <li class="stats_li" id="stat_exp">THOU have: 0 exp</li>
+            <li class="stats_li" id="stat_damage">THOU deal: 5 damage</li>
+            <li class="stats_li" id="stat_ecredits">THOU have: 0 Ecredits</li>
+        </ul>
+    </div>
+    <div onclick="powerup()" class="potion">
+        <section>
+            <div class="shadow"></div>
+            <div class="bowl">
+                <div class="liquid"></div>
+            </div>
+        </section>
+</div>
+    </div>
+<div class="play-area">
+    <div id="total-hp">
+        <div id="current-hp-bar">
+            <div id="current-hp">25hp/25hp</div>
+        </div>
+    </div>
+    <div id="player-sprite" onclick="do_damage()">
+        <img src="../images/The-Almighty-KVDG.png" alt="" class="enemy_sprite" id="enemy_sprite">
+    </div>
+    <fieldset id="exp-border">
+        <legend id="current-lvl-bar">Lv.1</legend>
+            <div id="total-exp">
+                <div id="current-exp-bar">
+                    <div id="current-exp">0exp/100exp</div>
+                </div>
+            </div>
+    </fieldset>
+</div>
+</div>
+
+<div class="area_direction">
+    <div><button onclick="beach_next()" id="beach" class="beach">beach</button></div>               <style> .beach {background-color: #008CBA;}         .beach {cursor: url(../images/cursor.png), auto;} </style> 
+    <div><button onclick="woods_next()" id="woods" class="woods">woods</button></div>               <style> .woods {background-color: #8b4513;}         .woods {cursor: url(../images/cursor.png), auto;} </style>
+    <div><button onclick="mountain_next()" id="mountain" class="mountain">mountain</button></div>   <style> .mountain {background-color: darkslategray} .mountain {cursor: url(../images/cursor.png), auto;} </style>
+    <div><button onclick="temple_next()" id="temple" class="temple">temple</button></div>           <style> .temple {background-color: sandybrown}      .temple {cursor: url(../images/cursor.png), auto;} </style>
+    <div><button onclick="hell_next()" id="hell" class="hell">hell</button></div>                   <style> .hell {background-color: red}               .hell {cursor: url(../images/cursor.png), auto;} </style>
+
+</div>
+<form action="../index/save.php" style="position: absolute; top:30px; right: 20px" method="POST">
+    <button>Save :D</button>
+    <input type="text" value="" name="username" id="username">
+    <input type="hidden" value="" name="form_lvl" id="form_lvl">
+    <input type="hidden" value="" name="form_xp" id="form_xp">
+    <input type="hidden" value="" name="form_dmg" id="form_dmg">
+    <input type="hidden" value="" name="form_ecrd" id="form_ecrd">
+</form>
+
+
+<script src="../js/game.js"></script>
+</body>
+</html>

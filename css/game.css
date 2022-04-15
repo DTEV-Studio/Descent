@@ -1,0 +1,132 @@
+*{
+    cursor: url(../images/cursor.png), auto;
+}
+.cursor{
+    cursor: url(../images/cursor.png), auto;
+}
+.game_body{
+    background-image: url(../images/beach.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    cursor: url(../images/cursor.png), auto;
+}
+.display{
+    display: flex;
+    position: relative;
+}
+.side_display{
+    flex-direction: column;
+    position: absolute;
+    left: -250px;
+}
+.stats{
+    width: 250px;
+    height: 250px;
+}
+.potion{
+    width: 250px;
+    height: 250px;
+}
+.play-area{
+    width: 550px;
+    height: 597px;
+    cursor: url(../images/cursor.png), auto;
+}
+
+#total-hp{
+    height: 45px;
+    border: 1px solid #fff;
+    background-image: linear-gradient(red, darkred);
+
+}
+
+#current-hp-bar{
+    background-image: linear-gradient(lime, green);
+    height: 100%;
+    width: 100%
+}
+
+#current-hp{
+    margin-left: 225px;
+    padding-top: 15px;
+    color: #fff;
+}
+
+#total-exp{
+    margin: 0;
+    margin-top: -8px;
+    height: 45px;
+    width: 545px;
+    /* border: 1px solid #000; */
+    background-image: linear-gradient(lightgray, gray);
+}
+#current-exp-bar{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    height: 100%;
+    width: 0;
+}
+#current-exp{
+    margin-left: 225px;
+    padding-top: 15px;  
+    color: #fff;
+}
+#current-lvl-bar{
+    color: #fff;
+    left: 50%;
+}
+#exp-border{
+    border: 1px solid #fff;
+    padding: 0;
+    border-top: -22px;
+}
+#exp-border legend{
+    margin: auto;
+}
+.enemy_sprite{
+    width: 550px;
+    height: 550px;
+    
+}
+.area_direction{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    position: bottom;
+    
+}
+.woods{
+    display: none;
+    cursor: url(../images/cursor.png), auto;
+}
+.mountain{
+    display: none;
+    cursor: url(../images/cursor.png), auto;
+}
+.temple{
+    display: none;
+    cursor: url(../images/cursor.png), auto;
+}
+.hell{
+    display: none;
+    cursor: url(../images/cursor.png), auto;
+}
+
+.stats_ul{
+    border-radius: 25px;
+    border: 2px solid #73AD21;
+    padding: 20px;
+    width: 250px;
+    height: 120px;
+    background-color: green;
+    margin-top: 20%;
+
+}
+.stats_li{
+    list-style-type: none;
+}
+
