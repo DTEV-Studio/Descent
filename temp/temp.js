@@ -29,17 +29,13 @@ function hell_next(){
     images = ["../images/slave1.png", "../images/slave2.png", "../images/slave3.png"];
 }
 
-
-
-
-
 // functie om de player te maken
 function Player(damage, experience, ecredits, max_experience, level) {
     this.damage = damage;
-    this.experience = 0;
-    this.ecredits = 0;
-    this.max_experience = 100;
-    this.level = 1;
+    this.experience = experience;
+    this.ecredits = ecredits;
+    this.max_experience = max_experience;
+    this.level = level;
 }
 // functie om de enemy te maken
 function Enemy(max_health, current_health, current_image, exp_drop, ecr_drop) {
@@ -66,10 +62,6 @@ Player.prototype.receive_powerup = function() {
 function powerup() {
     player.receive_powerup();
 }
-
-
-
-
 
 // als de player clickt dat de enemy damage krijgt
 Player.prototype.attack = function () {
@@ -114,7 +106,6 @@ Enemy.prototype.receiveDamage = function (damage) {
         give_exp()
         give_ecr()
         
-
         /*Generate a random number*/
         this.current_image = Math.floor(Math.random() * images.length);
         document.getElementById("enemy_sprite").src = images[this.current_image];
@@ -152,8 +143,8 @@ Player.prototype.levelup = function () {
 
 
 
-// loop voor updaten hp en exp bar
 function game_loop() {
+
     /*Elke 100 ms update om bijv nieuwe waardes te tekenen*/
     document.getElementById("current-hp-bar").style.width = enemy.current_health / enemy.max_health * 100 + "%";
     if(player.experience >= player.max_experience){
@@ -194,7 +185,5 @@ function game_loop() {
     document.getElementById("form_dmg").value = player.damage;
     document.getElementById("form_ecrd").value = player.ecredits;
     }
-
-
 
 setInterval(game_loop, 100);

@@ -30,4 +30,4 @@ $insert_user->execute([
     "ecr"        => $ecr
 ]);
 
-header("Location: ../game_area's/game.html");
+header("Location: ../game/game.html");

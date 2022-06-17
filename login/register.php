@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "../require_once/conn.php";
+require "../conn/conn.php";
 
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 try {
@@ -12,5 +12,4 @@ try {
     echo $error->getMessage();
 }
 
-
-header("location:index.php");
+header("location: ../index.php");
